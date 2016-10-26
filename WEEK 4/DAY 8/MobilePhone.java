@@ -21,7 +21,7 @@ public class MobilePhone extends OldPhone {
 		System.out.println("Alarm set for " + time + "...");
 	}
 	
-	private void playGame(String name) {
+	public void playGame(String name) {
 		System.out.println("Playing " + name + "...");
 	}
 	

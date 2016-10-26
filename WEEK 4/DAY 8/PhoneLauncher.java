@@ -29,10 +29,7 @@ public class PhoneLauncher {
 		mySmartPhone.call("07901010101");
 		mySmartPhone.printLastNumbers();
 		mySmartPhone.call("00447901010101");
-		
-		RestrictedSmartPhone myRestrictedSmartPhone = new RestrictedSmartPhone("iPhone");
-		
-		myRestrictedSmartPhone.playGame("Snake");
+
 	}
 
 }
