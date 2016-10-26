@@ -4,6 +4,10 @@
 
 public class SmartPhone extends MobilePhone {
 
+	public SmartPhone(String brand) {
+		super(brand);	
+	}
+	
 	@Override
 	public void call(String number) {
 		String numberPrefix = number.substring(0,2);
@@ -12,6 +16,10 @@ public class SmartPhone extends MobilePhone {
 		} else {
 			super.call(number);
 		}
+	}
+	
+	public void playGame(String name) {
+		System.out.println("Playing " + name + "...");
 	}
 	
 	public void browseWeb(String website) {

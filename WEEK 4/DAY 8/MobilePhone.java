@@ -7,7 +7,11 @@ public class MobilePhone extends OldPhone {
 	private String[] callHistory = new String[10];
 	private int callCounter = 0; // counts the number of numbers stored in the call history
 	
+	public MobilePhone(String brand) {
+		super(brand);	
+	}
 	
+	@Override
 	public void call(String number) {
 		super.call(number);
 		addToHistory(number);
@@ -17,7 +21,7 @@ public class MobilePhone extends OldPhone {
 		System.out.println("Alarm set for " + time + "...");
 	}
 	
-	public void playGame(String name) {
+	private void playGame(String name) {
 		System.out.println("Playing " + name + "...");
 	}
 	

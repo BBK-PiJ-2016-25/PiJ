@@ -7,8 +7,9 @@ public class PhoneLauncher {
 	
 	public void launch() {
 		
-		SmartPhone mySmartPhone = new SmartPhone();
-			
+		SmartPhone mySmartPhone = new SmartPhone("Nokia");
+		
+		System.out.println(mySmartPhone.getBrand());
 		mySmartPhone.call("07903871132");
 		mySmartPhone.call("07976899745");
 		mySmartPhone.printLastNumbers();
@@ -28,6 +29,10 @@ public class PhoneLauncher {
 		mySmartPhone.call("07901010101");
 		mySmartPhone.printLastNumbers();
 		mySmartPhone.call("00447901010101");
+		
+		RestrictedSmartPhone myRestrictedSmartPhone = new RestrictedSmartPhone("iPhone");
+		
+		myRestrictedSmartPhone.playGame("Snake");
 	}
 
 }
