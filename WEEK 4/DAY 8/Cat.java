@@ -17,7 +17,7 @@ public class Cat extends AnimalImpl implements Mammal {
 	
 	private void meow() {
 	
-		System.out.println("Meowwww, meow!");
+		System.out.println("Meowww, meow!");
 	
 	}
 	
