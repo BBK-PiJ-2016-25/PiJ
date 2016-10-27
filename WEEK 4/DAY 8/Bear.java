@@ -1,10 +1,12 @@
 
 public class Bear extends AnimalImpl implements Mammal {
 
+	private int total = 0;
 
 	public Bear(String name) {
 		
 		super(name);
+		total++;
 	}
 	
 	public void makeSound() {
@@ -23,6 +25,9 @@ public class Bear extends AnimalImpl implements Mammal {
 		
 		super.reproduce();
 		giveBirth();
+		Bear babyBear = new Bear("Baby Bear");
+		babyBear.makeSound();
+		System.out.println("Welcome to the world, " + babyBear.getName());
 		
 	}
 
@@ -30,6 +35,11 @@ public class Bear extends AnimalImpl implements Mammal {
 		
 		System.out.println(this.getName() + " is giving birth...");
 		
+	}
+
+	public int getTotal() {
+
+		return total;
 	}
 
 } 
