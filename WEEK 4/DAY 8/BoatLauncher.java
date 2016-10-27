@@ -5,23 +5,23 @@ public class BoatLauncher {
 
 		BoatLauncher noahsArk = new BoatLauncher();
 		noahsArk.castOff();
-		
+		/*
+		noahsArk.voyage();
+		noahsArk.dock;
+		*/
 	}
 	
 	private boolean departed = false;
 	
-	public enum Gender {
-    MALE, UNKNOWN
-	}
 	
 	public void castOff() {
 		
 		Bear mrBear = new Bear("Mr Bear");
 		Bear mrsBear = new Bear("Mrs Bear");
 		
-		/** Beetle mrBeetle = new Beetle("Mr Beetle");
+		Beetle mrBeetle = new Beetle("Mr Beetle");
 		Beetle mrsBeetle = new Beetle("Mrs Beetle");
-		
+		/*
 		Cat mrCat = new Cat("Mr Cat");
 		Cat mrsCat = new Cat("Mrs Cat");
 		
@@ -64,24 +64,75 @@ public class BoatLauncher {
 		*/
 		mrBear.call();
 		mrsBear.call();
-		/** Beetle.call();
-		Cat.call();
-		Crocodile.call();
-		Dog.call();
-		Dolphin.call();
-		Fly.call();
-		Fox.call();
-		Frog.call();
-		Lizard.call();
-		Monkey.call();
-		Pigeon.call();
-		Salmon.call();
+		
+		mrBeetle.call();
+		mrsBeetle.call();
+
+		/*
+		mrCat.call();
+		mrsCat.call();
+		
+		mrCrocodile.call();
+		mrsCrocodile.call();
+		
+		mrDog.call();
+		mrsDog.call();
+		
+		mrDolphin.call();
+		mrsDolphin.call();
+		
+		mrFly.call();
+		mrsFly.call();
+
+		mrFox.call();
+		mrsFox.call();
+
+		mrFrog.call();
+		mrsFrog.call();
+
+		mrLizard.call();
+		mrsLizard.call();
+
+		mrMonkey.call();
+		mrsMonkey.call();
+
+		mrPigeon.call();
+		mrsPigeon.call();
+
+		mrSalmon.call();
+		mrsSalmon.call();
+
 		Shark.call();
 		Snake.call();
 		Whale.call();
 		*/
 		departed = true;
 	}
+
+/*
+	public void voyage() {
+
+		Unicorn mrUnicorn = new Unicorn("Mr Unicorn");
+		Beetle mrsUnicorn = new Beetle("Mrs Unicorn");
+
+		Raven mrRaven = new Raven("Mr Raven");
+		Dove firstDove = new Dove("First Dove");
+		Dove secondDove = new Dove("Second Dove");
+		
+		mrRaven.call();
+
+		firstDove.call();
+		firstDove.call();
+
+	}
+
+	public void dock() {
+
+		mrsBear.reproduce();
+		mrsBeetle.reproduce();
+
+	}
+*/
 
 
 }
