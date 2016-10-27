@@ -21,10 +21,10 @@ public class BoatLauncher {
 		
 		Beetle mrBeetle = new Beetle("Mr Beetle");
 		Beetle mrsBeetle = new Beetle("Mrs Beetle");
-		/*
+	
 		Cat mrCat = new Cat("Mr Cat");
 		Cat mrsCat = new Cat("Mrs Cat");
-		
+		/*
 		Crocodile mrCrocodile = new Crocodile("Mr Crocodile");
 		Crocodile mrsCrocodile = new Crocodile("Mrs Crocodile");
 		
@@ -67,11 +67,10 @@ public class BoatLauncher {
 		
 		mrBeetle.call();
 		mrsBeetle.call();
-
-		/*
+		
 		mrCat.call();
 		mrsCat.call();
-		
+		/*
 		mrCrocodile.call();
 		mrsCrocodile.call();
 		

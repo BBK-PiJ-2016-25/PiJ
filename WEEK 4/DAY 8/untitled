@@ -1,0 +1,35 @@
+
+public class Beetle extends FlyingAnimal implements NonMammal {
+
+
+	public Beetle(String name) {
+		
+		super(name);
+	}
+	
+	public void makeSound() {
+	
+		click();
+	
+	}
+	
+	private void click() {
+	
+		System.out.println("Clickety Click click click");
+	
+	}
+	
+	public void reproduce() {
+		
+		super.reproduce();
+		layEggs();
+		
+	}
+
+	public void layEggs() {
+		
+		System.out.println(this.getName() + " is laying eggs...");
+		
+	}
+
+} 
