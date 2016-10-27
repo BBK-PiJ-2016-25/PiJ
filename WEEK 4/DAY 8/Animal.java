@@ -7,8 +7,8 @@ public interface Animal {
 	void call();
 	
 	/** 
-	* Reproduces another one of the animals
+	* Reproduces another one of the animals with mate
 	*/
-	void reproduce ();
+	void reproduce (AnimalImpl mate);
 
 }

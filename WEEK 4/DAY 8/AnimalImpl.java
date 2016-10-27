@@ -17,8 +17,11 @@ public class AnimalImpl implements Animal {
 		System.out.println(name + " coming...");
 	}
 	
+	public void reproduce(AnimalImpl mate) {
+		System.out.println(name + " and " + mate.getName() + " are making a baby...");
+	}
 	public void reproduce() {
-		System.out.println(name + " is making a baby...");
+		System.out.println(name + " is making a baby with an unknown mate...");
 	}
 	
 	public void makeSound() {
@@ -28,5 +31,5 @@ public class AnimalImpl implements Animal {
 	public String getName() {
 		return name;
 	}
-	
+
 }
