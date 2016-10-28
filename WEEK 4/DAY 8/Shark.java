@@ -3,7 +3,7 @@ public class Shark extends AquaticAnimal implements NonMammal {
 
 	private int total = 0;
 
-	public Salmon(String name) {
+	public Shark(String name) {
 		
 		super(name);
 		total++;
@@ -15,7 +15,7 @@ public class Shark extends AquaticAnimal implements NonMammal {
 	
 	}
 	
-	private void bubble() {
+	private void chomp() {
 	
 		System.out.println("Chomp chomp... chomp chomp...");
 	
