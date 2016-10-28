@@ -5,16 +5,11 @@ public class BoatLauncher {
 
 		BoatLauncher noahsArk = new BoatLauncher();
 		noahsArk.castOff();
-		/*
-		noahsArk.voyage();
-		noahsArk.dock;
-		*/
 	}
 	
-	private boolean departed = false;
-	
-	
 	public void castOff() {
+
+		System.out.println("The Ark is casting off...");
 		
 		Bear mrBear = new Bear("Mr Bear");
 		Bear mrsBear = new Bear("Mrs Bear");
@@ -112,34 +107,41 @@ public class BoatLauncher {
 
 		mrWhale.call();
 		mrsWhale.call();
+
+
+		mrsBear.reproduce(mrBear);
+	
+		mrsBeetle.reproduce(mrBeetle);
+
+		mrsCat.reproduce(mrCat);
 		
-		departed = true;
-	}
-
-/*
-	public void voyage() {
-
-		Unicorn mrUnicorn = new Unicorn("Mr Unicorn");
-		Beetle mrsUnicorn = new Beetle("Mrs Unicorn");
-
-		Raven mrRaven = new Raven("Mr Raven");
-		Dove firstDove = new Dove("First Dove");
-		Dove secondDove = new Dove("Second Dove");
+		mrsCrocodile.reproduce(mrCrocodile);
 		
-		mrRaven.call();
+		mrsDog.reproduce(mrDog);
+		
+		mrsDolphin.reproduce(mrDolphin);
+		
+		mrsFly.reproduce(mrFly);
 
-		firstDove.call();
-		firstDove.call();
+		mrsFox.reproduce(mrFox);
+
+		mrsFrog.reproduce(mrFrog);
+		
+		mrsLizard.reproduce(mrLizard);
+
+		mrsMonkey.reproduce(mrMonkey);
+
+		mrsPigeon.reproduce(mrPigeon);
+
+		mrsSalmon.reproduce(mrSalmon);
+
+		mrsShark.reproduce(mrShark);
+
+		mrsSnake.reproduce(mrSnake);
+
+		mrsWhale.reproduce(mrWhale);
 
 	}
-
-	public void dock() {
-
-		mrsBear.reproduce();
-		mrsBeetle.reproduce();
-
-	}
-*/
 
 
 }
