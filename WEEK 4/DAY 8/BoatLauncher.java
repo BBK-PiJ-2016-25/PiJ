@@ -24,10 +24,10 @@ public class BoatLauncher {
 	
 		Cat mrCat = new Cat("Mr Cat");
 		Cat mrsCat = new Cat("Mrs Cat");
-		/*
+		
 		Crocodile mrCrocodile = new Crocodile("Mr Crocodile");
 		Crocodile mrsCrocodile = new Crocodile("Mrs Crocodile");
-		
+
 		Dog mrDog = new Dog("Mr Dog");
 		Dog mrsDog = new Dog("Mrs Dog");
 		
@@ -36,19 +36,22 @@ public class BoatLauncher {
 		
 		Fly mrFly = new Fly("Mr Fly");
 		Fly mrsFly = new Fly("Mrs Fly");
+
+		Fox mrFox = new Fox("Mr Fox");
+		Fox mrsFox = new Fox("Mrs Fox");
 		
 		Frog mrFrog = new Frog("Mr Frog");
 		Frog mrsFrog = new Frog("Mrs Frog");
-		
+	
 		Lizard mrLizard = new Lizard("Mr Lizard");
 		Lizard mrsLizard = new Lizard("Mrs Lizard");
-		
+
 		Monkey mrMonkey = new Monkey("Mr Monkey");
 		Monkey mrsMonkey = new Monkey("Mrs Monkey");
-		
+
 		Pigeon mrPigeon = new Pigeon("Mr Pigeon");
 		Pigeon mrsPigeon = new Pigeon("Mrs Pigeon");
-		
+
 		Salmon mrSalmon = new Salmon("Mr Salmon");
 		Salmon mrsSalmon = new Salmon("Mrs Salmon");
 		
@@ -59,9 +62,9 @@ public class BoatLauncher {
 		Snake mrsSnake = new Snake("Mrs Snake");
 		
 		Whale mrWhale = new Whale("Mr Whale");
-		Snake mrsWhale = new Whale("Mrs Whale");
+		Whale mrsWhale = new Whale("Mrs Whale");
 		
-		*/
+
 		mrBear.call();
 		mrsBear.call();
 		
@@ -70,7 +73,7 @@ public class BoatLauncher {
 		
 		mrCat.call();
 		mrsCat.call();
-		/*
+		
 		mrCrocodile.call();
 		mrsCrocodile.call();
 		
@@ -88,23 +91,28 @@ public class BoatLauncher {
 
 		mrFrog.call();
 		mrsFrog.call();
-
+		
 		mrLizard.call();
 		mrsLizard.call();
 
 		mrMonkey.call();
 		mrsMonkey.call();
-
+		
 		mrPigeon.call();
 		mrsPigeon.call();
 
 		mrSalmon.call();
 		mrsSalmon.call();
 
-		Shark.call();
-		Snake.call();
-		Whale.call();
-		*/
+		mrShark.call();
+		mrsShark.call();
+
+		mrSnake.call();
+		mrsSnake.call();
+
+		mrWhale.call();
+		mrsWhale.call();
+		
 		departed = true;
 	}
 
