@@ -25,7 +25,7 @@ public class Crocodile extends AnimalImpl implements NonMammal {
 		
 		super.reproduce();
 		layEggs();
-		Crocodile babyCat = new Crocodile("Baby Crocodile");
+		Crocodile babyCrocodile = new Crocodile("Baby Crocodile");
 		babyCrocodile.makeSound();
 		System.out.println("Welcome to the world, " + babyCrocodile.getName());
 		
