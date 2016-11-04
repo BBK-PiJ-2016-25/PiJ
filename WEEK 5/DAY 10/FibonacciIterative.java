@@ -15,19 +15,19 @@ public class FibonacciIterative {
 
 		} else {
 
-			int x = 0;
-			int y = 1;
-			int z = 0;
+			int previous = 1;
+			int current = 0;
+			int next = 0;
 
 			for (int i = 0; i<=n; i++) {
 				
-				x = z + y;
-				y = z;
-				z = x;
+				next = current + previous;
+				previous = current;
+				current = next;
 
 			}
 
-			return y;
+			return previous;
 		}
 	}
 
