@@ -12,6 +12,7 @@ public class Launcher {
 
 		System.out.println(itn.getMax());
 		System.out.println(itn.getMin());
+		System.out.println(itn.toString());
 	}
 
 

@@ -78,6 +78,33 @@ public class IntegerTreeNode {
 
 
 	}
-	
+
+	public String toString(){
+
+
+		if (this.left == null && this.right == null){
+
+			return Integer.toString(value);
+
+		} else if (this.left == null) {
+
+		String str = "[" + this.value + " L[]" + " R" + right.toString() + "]";	
+
+			return str;
+
+		} else if (this.right == null) {
+
+			String str = "[" + this.value + " L" + left.toString() + " R[]]";		
+
+			return str;
+
+		} else {
+
+			String str = "[" + this.value + " L" + left.toString() + " R" + right.toString() + "]";		
+
+			return str; 
+		}
+
+	}
 
 }
