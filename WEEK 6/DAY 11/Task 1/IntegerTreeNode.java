@@ -1,8 +1,12 @@
-public class IntegerTreeNode {
+public class IntegerTreeNode{
 
-	int value;
+	
 	IntegerTreeNode left;
 	IntegerTreeNode right;
+	int value;
+	static int leftDepth;
+	static int rightDepth;
+	int depth = 0;
 
 
 	public IntegerTreeNode(int value) {
@@ -88,7 +92,7 @@ public class IntegerTreeNode {
 
 		} else if (this.left == null) {
 
-		String str = "[" + this.value + " L[]" + " R" + right.toString() + "]";	
+			String str = "[" + this.value + " L[]" + " R" + right.toString() + "]";	
 
 			return str;
 
@@ -106,5 +110,29 @@ public class IntegerTreeNode {
 		}
 
 	}
+
+	public int findDepth(){
+
+		if (this.left == null) {
+
+
+			return right.findDepth();
+		} else {
+			leftDepth++;
+			return left.findDepth();
+		}
+		if (this.right == null) {
+
+
+			return rightDepth;
+		} else {
+			rightDepth++;
+			return right.findDepth();
+		}
+		
+	}
+
+
+
 
 }
