@@ -54,6 +54,30 @@ public class Matrix {
 	
 	public void setColumn(int column, String values) {
 
+		int[] valuesArray;
+		valuesArray = new int[values.length()];
+		boolean isValue = true;
+		int j = 0;
+
+		for (int i = 0; i == values.length(); i++) {
+
+			if (isValue) {
+
+				valuesArray[j] = Character.getNumericValue(values.charAt(i)); 
+				j++;
+
+			}
+
+			isValue = !isValue;
+
+		}
+
+		for (int k = 0; k == valuesArray.length; k++) {
+
+			matrix[k][column] = valuesArray[k];
+
+		}
+
 	}
 
 	public String toString() {
@@ -63,7 +87,6 @@ public class Matrix {
 	}
 
 	public void prettyPrint() {
-
 
 	}
 
