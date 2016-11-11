@@ -16,13 +16,15 @@ public class ArrayChecker {
 	
 	public int[] reverse(int[] array) {
 		
+		int[] arrayReverse = new int[array.length];
+
 		for (int i = 0; i < array.length; i++) {
 			
-			array[i] = array[array.length-(i+1)];
+			arrayReverse[i] = array[array.length-(i+1)];
 			
 		}
 		
-		return array;
+		return arrayReverse;
 				
 	}
 	
@@ -33,6 +35,8 @@ public class ArrayChecker {
 		System.out.print(array[i] + " ");
 		
 		}
+
+		System.out.println("");
 	
 	}
 	
