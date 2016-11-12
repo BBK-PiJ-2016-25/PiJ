@@ -58,37 +58,37 @@ public class Target {
 
 		for (int i = 0; i < row; i++) {
 
-			leftTotal+= target[i];
+			leftTotal += target[i][column][layer];
 
 		}
 
 		for (int i = row; i < target.length; i++) {
 
-			rightTotal+= target[i];
+			rightTotal += target[i][column][layer];
 
 		}
 
 		for (int j = 0; j < column; j++) {
 
-			aboveTotal+= target[i][j];
+			aboveTotal += target[row][j][layer];
 
 		}
 
 		for (int j = column; j < target.length; j++) {
 
-			belowTotal+= target[i][j];
+			belowTotal += target[row][j][layer];
 
 		}
 
 		for (int k = 0; k < layer; k++) {
 
-			inFrontTotal+= target[i][j][k];
+			inFrontTotal += target[row][column][k];
 
 		}
 
 		for (int k = layer; k < target.length; k++) {
 
-			behindTotal+= target[i][j][k];
+			behindTotal += target[row][column][k];
 
 		}
 
@@ -99,34 +99,37 @@ public class Target {
 
 			return Result.OUT_OF_RANGE;
 
-
 		} else if (target[row][column][layer] == 1) {
 
-				return Result.HIT;
+			return Result.HIT;
 
 		} else if (leftTotal < rightTotal) {
 
-				return Result.FAIL_LEFT;
+			return Result.FAIL_LEFT;
 
 		} else if (rightTotal < leftTotal) {
 
-				return Result.FAIL_RIGHT;
+			return Result.FAIL_RIGHT;
 
 		} else if (belowTotal < aboveTotal) {
 
-				return Result.FAIL_LOW;
+			return Result.FAIL_LOW;
 
 		} else if (aboveTotal < belowTotal) {
 
-				return Result.FAIL_HIGH;
+			return Result.FAIL_HIGH;
 
 		} else if (behindTotal < inFrontTotal) {
 
-				return Result.FAIL_SHORT;
+			return Result.FAIL_SHORT;
 
 		} else if (inFrontTotal < behindTotal) {
 
-				return Result.FAIL_LONG;
+			return Result.FAIL_LONG;
+		
+		} else {
+
+			return Result.OUT_OF_RANGE;
 		}
 
 
