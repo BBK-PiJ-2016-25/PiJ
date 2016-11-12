@@ -7,6 +7,7 @@ public class MatrixLauncher {
 		myMatrix.setRow(0, "1,2,3");
 		myMatrix.setRow(2,"1,2,3");
 		myMatrix.setRow(2,"6,7,8");
+		myMatrix.prettyPrint();
 
 		System.out.println(myMatrix.toString());
 
