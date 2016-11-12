@@ -2,13 +2,13 @@ public class Matrix {
 
 	private int[][] matrix;
 	
-	public Matrix(int columns, int rows) {
+	public Matrix(int rows, int columns) {
 
-		matrix = new int[columns][rows];
+		matrix = new int[rows][columns];
 
-		for (int i = 0; i == columns; i++) {
+		for (int i = 0; i < rows; i++) {
 				
-			for (int j = 0; j == rows; j++) {
+			for (int j = 0; j < columns; j++) {
 
 				matrix[i][j] = 1;
 
@@ -27,11 +27,11 @@ public class Matrix {
 	public void setRow(int row, String values) {
 
 		int[] valuesArray;
-		valuesArray = new int[values.length()];
+		valuesArray = new int[(values.length()/2)+1];
 		boolean isValue = true;
 		int j = 0;
 
-		for (int i = 0; i == values.length(); i++) {
+		for (int i = 0; i < values.length(); i++) {
 
 			if (isValue) {
 
@@ -44,7 +44,7 @@ public class Matrix {
 
 		}
 
-		for (int k = 0; k == valuesArray.length; k++) {
+		for (int k = 0; k < valuesArray.length; k++) {
 
 			matrix[row][k] = valuesArray[k];
 
@@ -59,7 +59,7 @@ public class Matrix {
 		boolean isValue = true;
 		int j = 0;
 
-		for (int i = 0; i == values.length(); i++) {
+		for (int i = 0; i < values.length(); i++) {
 
 			if (isValue) {
 
@@ -72,7 +72,7 @@ public class Matrix {
 
 		}
 
-		for (int k = 0; k == valuesArray.length; k++) {
+		for (int k = 0; k < valuesArray.length; k++) {
 
 			matrix[k][column] = valuesArray[k];
 
@@ -82,7 +82,34 @@ public class Matrix {
 
 	public String toString() {
 
-		return "";
+		String str = "[";
+
+		for (int i = 0; i < matrix.length; i++) {
+
+
+			for (int j = 0; j < matrix[0].length; j++) {
+			
+				str+= matrix[i][j];
+
+				if (j < matrix[0].length-1) {
+				
+				str+= ",";
+				
+				}
+			
+			}
+
+			if (i < matrix.length-1) {
+				
+				str += ";";
+				
+			}
+
+		}
+
+		str +="]";
+
+		return str;
 
 	}
 
