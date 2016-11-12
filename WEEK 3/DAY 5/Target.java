@@ -42,8 +42,99 @@ public class Target {
 
 		target[rowToGuess][columnToGuess][layerToGuess] = 1;
 
+	}
+
+	public Result fire(int row, int column, int layer) {
+
+		int leftTotal = 0;
+		int rightTotal = 0;
+
+		int aboveTotal = 0;
+		int belowTotal = 0;
+
+		int behindTotal = 0;
+		int inFrontTotal = 0;
+
+
+		for (int i = 0; i < row; i++) {
+
+			leftTotal+= target[i];
+
+		}
+
+		for (int i = row; i < target.length; i++) {
+
+			rightTotal+= target[i];
+
+		}
+
+		for (int j = 0; j < column; j++) {
+
+			aboveTotal+= target[i][j];
+
+		}
+
+		for (int j = column; j < target.length; j++) {
+
+			belowTotal+= target[i][j];
+
+		}
+
+		for (int k = 0; k < layer; k++) {
+
+			inFrontTotal+= target[i][j][k];
+
+		}
+
+		for (int k = layer; k < target.length; k++) {
+
+			behindTotal+= target[i][j][k];
+
+		}
+
+
+		if ((row >= target.length || column >= target.length || layer >= target.length)
+		||
+		(row < 0 || column < 0 || layer < 0)) {
+
+			return Result.OUT_OF_RANGE;
+
+
+		} else if (target[row][column][layer] == 1) {
+
+				return Result.HIT;
+
+		} else if (leftTotal < rightTotal) {
+
+				return Result.FAIL_LEFT;
+
+		} else if (rightTotal < leftTotal) {
+
+				return Result.FAIL_RIGHT;
+
+		} else if (belowTotal < aboveTotal) {
+
+				return Result.FAIL_LOW;
+
+		} else if (aboveTotal < belowTotal) {
+
+				return Result.FAIL_HIGH;
+
+		} else if (behindTotal < inFrontTotal) {
+
+				return Result.FAIL_SHORT;
+
+		} else if (inFrontTotal < behindTotal) {
+
+				return Result.FAIL_LONG;
+		}
+
+
+
 
 	}
+
+
 
 
 }
