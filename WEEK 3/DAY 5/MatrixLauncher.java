@@ -18,7 +18,16 @@ public class MatrixLauncher {
 		System.out.println(anotherMatrix.toString());
 		anotherMatrix.prettyPrint();
 
+		Matrix symmetricalMatrix = new Matrix(3,3);
+		symmetricalMatrix.setMatrix("1,2,1;2,3,2;1,2,1");
 
+		MatrixChecker myMatrixChecker = new MatrixChecker();
+
+		System.out.println(myMatrixChecker.isSymmetrical(myMatrix.getMatrix()));
+
+		symmetricalMatrix.prettyPrint();
+
+		System.out.println(myMatrixChecker.isSymmetrical(symmetricalMatrix.getMatrix()));
 		
 	}
 
