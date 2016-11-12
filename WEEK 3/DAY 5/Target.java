@@ -70,6 +70,7 @@ public class Target {
 				for (int k = 0; k < target.length; k++) {
 
 					leftTotal += target[i][j][k];
+					// assigns the sum of all numbers to the left of the guessed coordinate
 
 				}
 			}
@@ -83,6 +84,7 @@ public class Target {
 				for (int k = 0; k < target.length; k++) {
 
 					rightTotal += target[i][j][k];
+					 // assigns the sum of all numbers to the right of the guessed coordinate
 
 				}
 			}
@@ -96,6 +98,7 @@ public class Target {
 				for (int k = 0; k < target.length; k++) {
 
 					aboveTotal += target[i][j][k];
+					// assigns the sum of all numbers above the guessed coordinate (taking the column/y axis as a height dimension)
 
 				}
 			}
@@ -109,6 +112,7 @@ public class Target {
 				for (int k = 0; k < target.length; k++) {
 
 					belowTotal += target[i][j][k];
+					// assigns the sum of all numbers below the guessed coordinate (taking the column/y axis as a height dimension)
 
 				}
 			}
@@ -122,6 +126,7 @@ public class Target {
 				for (int j = 0; j < target.length; j++) {
 
 					inFrontTotal += target[i][j][k];
+					// assigns the sum of all numbers in front of the guessed coordinate (taking the layer/z axis as a depth dimension)
 
 				}
 			}
@@ -135,6 +140,7 @@ public class Target {
 				for (int j = 0; j < target.length; j++) {
 
 					behindTotal += target[i][j][k];
+					// assigns the sum of all numbers behind of the guessed coordinate (taking the layer/z axis as a depth dimension)
 
 				}
 			}
