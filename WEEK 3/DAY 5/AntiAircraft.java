@@ -28,6 +28,7 @@ public class AntiAircraft {
 
 			System.out.println("Enter a Z coordinate:");
 			layer = scan.nextInt();
+			
 
 			switch (target.fire(row,column,layer)) {
 

@@ -21,6 +21,12 @@ public class Target {
 		}
 	}
 
+	public int[][][] getTarget() {
+
+		return target;
+	}
+
+
 	public void init() {
 
 		for (int i = 0; i < target.length; i++) {
@@ -36,11 +42,12 @@ public class Target {
 			}
 		}
 
-		int rowToGuess =  (int) Math.abs(target.length+1 * Math.random());
-		int columnToGuess = (int) Math.abs(target.length+1 * Math.random());
-		int layerToGuess = (int) Math.abs(target.length+1 * Math.random());
+		int rowToGuess =  (int) Math.abs(target.length * Math.random());
+		int columnToGuess = (int) Math.abs(target.length * Math.random());
+		int layerToGuess = (int) Math.abs(target.length * Math.random());
 
 		target[rowToGuess][columnToGuess][layerToGuess] = 1;
+
 
 	}
 
@@ -58,40 +65,81 @@ public class Target {
 
 		for (int i = 0; i < row; i++) {
 
-			leftTotal += target[i][column][layer];
+			for (int j = 0; j < target.length; j++) {
+
+				for (int k = 0; k < target.length; k++) {
+
+					leftTotal += target[i][j][k];
+
+				}
+			}
 
 		}
 
-		for (int i = row; i < target.length; i++) {
+		for (int i = row+1; i < target.length; i++) {
 
-			rightTotal += target[i][column][layer];
+			for (int j = 0; j < target.length; j++) {
+
+				for (int k = 0; k < target.length; k++) {
+
+					rightTotal += target[i][j][k];
+
+				}
+			}
 
 		}
 
 		for (int j = 0; j < column; j++) {
 
-			aboveTotal += target[row][j][layer];
+			for (int i = 0; i < target.length; i++) {
+
+				for (int k = 0; k < target.length; k++) {
+
+					aboveTotal += target[i][j][k];
+
+				}
+			}
 
 		}
 
-		for (int j = column; j < target.length; j++) {
+		for (int j = column+1; j < target.length; j++) {
 
-			belowTotal += target[row][j][layer];
+			for (int i = 0; i < target.length; i++) {
+
+				for (int k = 0; k < target.length; k++) {
+
+					belowTotal += target[i][j][k];
+
+				}
+			}
 
 		}
 
 		for (int k = 0; k < layer; k++) {
 
-			inFrontTotal += target[row][column][k];
+			for (int i = 0; i < target.length; i++) {
+
+				for (int j = 0; j < target.length; j++) {
+
+					inFrontTotal += target[i][j][k];
+
+				}
+			}
 
 		}
 
-		for (int k = layer; k < target.length; k++) {
+		for (int k = layer+1; k < target.length; k++) {
 
-			behindTotal += target[row][column][k];
+			for (int i = 0; i < target.length; i++) {
+
+				for (int j = 0; j < target.length; j++) {
+
+					behindTotal += target[i][j][k];
+
+				}
+			}
 
 		}
-
 
 		if ((row >= target.length || column >= target.length || layer >= target.length)
 		||
@@ -113,27 +161,24 @@ public class Target {
 
 		} else if (belowTotal < aboveTotal) {
 
-			return Result.FAIL_LOW;
+			return Result.FAIL_HIGH; 
 
 		} else if (aboveTotal < belowTotal) {
 
-			return Result.FAIL_HIGH;
+			return Result.FAIL_LOW;
 
 		} else if (behindTotal < inFrontTotal) {
 
-			return Result.FAIL_SHORT;
+			return Result.FAIL_LONG;
 
 		} else if (inFrontTotal < behindTotal) {
 
-			return Result.FAIL_LONG;
+			return Result.FAIL_SHORT;
 		
 		} else {
 
 			return Result.OUT_OF_RANGE;
 		}
-
-
-
 
 	}
 
