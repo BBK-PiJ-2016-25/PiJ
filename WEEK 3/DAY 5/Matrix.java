@@ -50,6 +50,19 @@ public class Matrix {
 
 	}
 
+	public void setMatrix(String values) {
+
+		String[] rowsArray;
+		rowsArray = values.split(";");
+
+		for (int i = 0; i < rowsArray.length; i++) {
+
+			setRow(i, rowsArray[i]);
+
+		}
+
+	}
+
 	public String toString() {
 
 		String str = "[";
