@@ -120,5 +120,24 @@ public class Matrix {
 
 	}
 
+	public boolean isSymmetrical() {
+
+
+		MatrixChecker checker = new MatrixChecker();
+
+		return checker.isSymmetrical(getMatrix());
+
+	}
+
+	public boolean isTriangular() {
+
+
+		MatrixChecker checker = new MatrixChecker();
+
+		return checker.isTriangular(getMatrix());
+
+	}
+
+
 
 }
