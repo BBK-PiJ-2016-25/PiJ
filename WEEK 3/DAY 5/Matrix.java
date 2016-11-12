@@ -26,27 +26,12 @@ public class Matrix {
 
 	public void setRow(int row, String values) {
 
-		int[] valuesArray;
-		valuesArray = new int[(values.length()/2)+1];
-		boolean isValue = true;
-		int j = 0;
+		String[] valuesArray;
+		valuesArray = values.split(",");
 
-		for (int i = 0; i < values.length(); i++) {
+		for (int i = 0; i < valuesArray.length; i++) {
 
-			if (isValue) {
-
-				valuesArray[j] = Character.getNumericValue(values.charAt(i)); 
-				j++;
-
-			}
-
-			isValue = !isValue;
-
-		}
-
-		for (int k = 0; k < valuesArray.length; k++) {
-
-			matrix[row][k] = valuesArray[k];
+			matrix[row][i] = Integer.parseInt(valuesArray[i]);
 
 		}
 
@@ -54,27 +39,12 @@ public class Matrix {
 	
 	public void setColumn(int column, String values) {
 
-		int[] valuesArray;
-		valuesArray = new int[values.length()];
-		boolean isValue = true;
-		int j = 0;
+		String[] valuesArray;
+		valuesArray = values.split(",");
 
-		for (int i = 0; i < values.length(); i++) {
+		for (int i = 0; i < valuesArray.length; i++) {
 
-			if (isValue) {
-
-				valuesArray[j] = Character.getNumericValue(values.charAt(i)); 
-				j++;
-
-			}
-
-			isValue = !isValue;
-
-		}
-
-		for (int k = 0; k < valuesArray.length; k++) {
-
-			matrix[k][column] = valuesArray[k];
+			matrix[i][column] = Integer.parseInt(valuesArray[i]);
 
 		}
 
