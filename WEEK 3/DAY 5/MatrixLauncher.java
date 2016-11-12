@@ -21,6 +21,9 @@ public class MatrixLauncher {
 		Matrix symmetricalMatrix = new Matrix(3,3);
 		symmetricalMatrix.setMatrix("1,2,1;2,3,2;1,2,1");
 
+		Matrix triangularMatrix = new Matrix(3,3);
+		triangularMatrix.setMatrix("1,0,0;1,1,0;1,1,1");
+
 		MatrixChecker myMatrixChecker = new MatrixChecker();
 
 		System.out.println(myMatrixChecker.isSymmetrical(myMatrix.getMatrix()));
@@ -28,6 +31,8 @@ public class MatrixLauncher {
 		symmetricalMatrix.prettyPrint();
 
 		System.out.println(myMatrixChecker.isSymmetrical(symmetricalMatrix.getMatrix()));
+
+		triangularMatrix.prettyPrint();
 		
 	}
 

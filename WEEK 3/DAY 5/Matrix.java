@@ -18,6 +18,12 @@ public class Matrix {
 
 	}
 
+	public int[][] getMatrix() {
+
+		return matrix;
+
+	}
+
 	public void setElement(int column, int row, int value) {
 
 		matrix[column][row] = value;
