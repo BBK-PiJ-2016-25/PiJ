@@ -1,10 +1,16 @@
 public class DoublyLinkedList {
 	
 	private Patient firstPatient = null;
+	private Patient finalPatient = null;
 
 	public Patient getFirstPatient() {
 		
 		return firstPatient;
+	}
+
+	public Patient getFinalPatient() {
+		
+		return finalPatient;
 	}
 
 	public void addPatient(Patient newPatient) {
@@ -22,6 +28,8 @@ public class DoublyLinkedList {
 
 		current.setNextPatient(newPatient);
 		newPatient.setLastPatient(current);
+
+		finalPatient = newPatient;
 	}
 
 	public boolean deletePatient(String name) {
@@ -33,6 +41,12 @@ public class DoublyLinkedList {
 		if (firstPatient.getName().equals(name)) {
 			firstPatient = firstPatient.getNextPatient();
 			firstPatient.setLastPatient(null);
+			return true;
+		}
+
+		if (finalPatient.getName().equals(name)) {
+			finalPatient = finalPatient.getLastPatient();
+			finalPatient.setNextPatient(null);
 			return true;
 		}
 
@@ -49,7 +63,27 @@ public class DoublyLinkedList {
 		return false;
 	}
 
-	public void print() {
+	public void printFwd() {
+
+		Patient current = firstPatient;
+
+			do {
+
+				System.out.println(
+
+					current.getName() + " " +
+					current.getAge() + " " +
+					current.getIllness()
+
+					);
+
+				current = current.getNextPatient();
+
+
+			} while (current != null);
+	}
+
+	public void printBwd() {
 
 		Patient current = firstPatient;
 
