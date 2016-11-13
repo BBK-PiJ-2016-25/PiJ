@@ -85,7 +85,7 @@ public class DoublyLinkedList {
 
 	public void printBwd() {
 
-		Patient current = firstPatient;
+		Patient current = finalPatient;
 
 			do {
 
@@ -97,7 +97,7 @@ public class DoublyLinkedList {
 
 					);
 
-				current = current.getNextPatient();
+				current = current.getLastPatient();
 
 
 			} while (current != null);
