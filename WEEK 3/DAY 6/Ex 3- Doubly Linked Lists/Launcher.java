@@ -26,5 +26,16 @@ public class Launcher {
 		patientList.addPatient(jeremy);
 		patientList.addPatient(emily);
 
+		patientList.printFwd();
+		patientList.printBwd();
+
+		patientList.deletePatient("Luke");
+
+		patientList.printFwd();
+		patientList.printBwd();
+
+
+
+
 	}
 }
