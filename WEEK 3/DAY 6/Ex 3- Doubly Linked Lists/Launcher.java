@@ -14,6 +14,7 @@ public class Launcher {
 		Patient barbara = new Patient("Barbara", 90, "Arthritis");
 		Patient jeremy = new Patient("Jeremy", 63, "Flu");
 		Patient emily = new Patient("Emily", 5, "Chicken Pox");
+		Patient jo = new Patient("Jo", 28, "Acne");
 
 		patientList.addPatient(matthew);
 		patientList.addPatient(mark);
@@ -28,12 +29,22 @@ public class Launcher {
 
 		patientList.printFwd();
 		patientList.printBwd();
+		System.out.println();
 
 		patientList.deletePatient("Luke");
+		patientList.deletePatient("Barbara");
 
 		patientList.printFwd();
 		patientList.printBwd();
+		System.out.println();
 
+		patientList.addPatient(jo);		
+
+		patientList.deletePatient("Annie");
+
+		patientList.printFwd();
+		patientList.printBwd();
+		System.out.println();
 
 
 
