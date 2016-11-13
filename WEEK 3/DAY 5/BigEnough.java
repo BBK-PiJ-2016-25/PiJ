@@ -43,6 +43,14 @@ public class BigEnough {
 
 		} while (!(id == 0 || name.length() == 0));
 
+		for (int i = 0; i < employeeData.getIdArray().length; i++) {
+
+			if ((employeeData.getIdArray()[i]!= 0) && ((employeeData.getIdArray()[i]%2 == 0) || (employeeData.getNameArray()[i].charAt(0) == 'S'))) {
+
+				System.out.println(employeeData.getIdArray()[i] + " " + employeeData.getNameArray()[i]);
+			}
+		}
+
 	}
 
 }
