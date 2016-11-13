@@ -53,7 +53,7 @@ public class Patient {
 	}
 
 	public void setLastPatient(Patient lastPatient) {
-		this.lastPatient = lasPatient;
+		this.lastPatient = lastPatient;
 	}
 
 
