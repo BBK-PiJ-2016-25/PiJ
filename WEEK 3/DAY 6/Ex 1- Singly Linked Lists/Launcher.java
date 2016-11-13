@@ -26,5 +26,23 @@ public class Launcher {
 		patientList.addPatient(jeremy);
 		patientList.addPatient(emily);
 
+		Patient current = patientList.getFirstPatient();
+		System.out.println(patientList.getFirstPatient().getName());
+
+		do {
+
+			System.out.println(
+
+				current.getName() + " " +
+				current.getAge() + " " +
+				current.getIllness()
+
+				);
+
+			current = current.getNextPatient();
+
+
+		} while (current != null);
+
 	}
 }
