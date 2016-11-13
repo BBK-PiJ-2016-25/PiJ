@@ -2,7 +2,7 @@ public class Launcher {
 	
 	public static void main(String[] args) {
 
-		HospitalManager patientList = new HospitalManager(10);
+		HospitalManager patientList = new HospitalManager();
 
 		Patient matthew = new Patient("Matthew", 25, "Conjunctivitis");
 		Patient mark = new Patient("Mark", 31, "Hernia");
@@ -26,15 +26,5 @@ public class Launcher {
 		patientList.addPatient(jeremy);
 		patientList.addPatient(emily);
 
-		
-		for (int i =0; i < patientList.getPatientArray().length; i ++) {
-
-			System.out.println(
-				patientList.getPatientArray()[i].getName() + " " +
-				patientList.getPatientArray()[i].getAge() + " " +
-				patientList.getPatientArray()[i].getIllness()
-				);
-
-		}
 	}
 }

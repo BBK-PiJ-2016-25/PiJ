@@ -1,19 +1,13 @@
 
 public class HospitalManager {
 
-	private Patient[] patientArray;
 	private Patient firstPatient = null;
 
-	public HospitalManager(int size) {
-
-		patientArray = new Patient[size];
-
+	public Patient getFirstPatient() {
+		
+		return firstPatient;
 	}
 
-	public Patient[] getPatientArray() {
-
-		return patientArray;
-	}
 
 	public void addPatient(Patient newPatient) {
 		if (firstPatient == null) {
