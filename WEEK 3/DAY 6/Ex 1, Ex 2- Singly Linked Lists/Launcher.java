@@ -27,5 +27,6 @@ public class Launcher {
 		patientList.addPatient(emily);
 
 		patientList.print();
+		System.out.println(patientList.length());
 	}
 }

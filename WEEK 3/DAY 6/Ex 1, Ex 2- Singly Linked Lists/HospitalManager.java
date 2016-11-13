@@ -46,6 +46,32 @@ public class HospitalManager {
 		return false;
 	}
 
+	public int length() {
+
+		int length = 0;
+
+		if (firstPatient == null) {
+
+			return length;
+
+		} else {
+
+			Patient current = firstPatient;
+
+			do {
+
+				length++;
+				current = current.getNextPatient();
+
+			} while (current != null);
+
+			return length;
+
+		}
+
+
+	}
+
 	public void print() {
 
 		Patient current = firstPatient;
