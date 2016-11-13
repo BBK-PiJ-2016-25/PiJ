@@ -27,9 +27,9 @@ public class BigEnough {
 			}
 
 
-
 			System.out.println("Please enter an employee ID:");
 			id = scan.nextInt();
+			scan.nextLine();
 
 			System.out.println("Please enter an employee name:");
 			name = scan.nextLine();
