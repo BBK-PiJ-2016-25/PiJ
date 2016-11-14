@@ -5,7 +5,6 @@ public class Patient {
 	private int age;
 	private String illness;
 	private Patient nextPatient;
-	private Patient lastPatient;
 
 
 	public Patient(String name, int age, String illness) {
@@ -47,14 +46,5 @@ public class Patient {
 	public void setNextPatient(Patient nextPatient) {
 		this.nextPatient = nextPatient;
 	}
-
-	public Patient getLastPatient() {
-		return lastPatient;
-	}
-
-	public void setLastPatient(Patient lastPatient) {
-		this.lastPatient = lastPatient;
-	}
-
 
 }
