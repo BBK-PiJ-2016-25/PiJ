@@ -16,8 +16,6 @@ public class Launcher {
 		Patient emily = new Patient("Emily", 5, "Chicken Pox");
 		Patient jo = new Patient("Jo", 28, "Acne");
 
-		System.out.println("Patients created...");
-
 		patientList.addPatient(matthew);
 		patientList.addPatient(mark);
 		patientList.addPatient(luke);
@@ -29,9 +27,22 @@ public class Launcher {
 		patientList.addPatient(jeremy);
 		patientList.addPatient(emily);
 
-		System.out.println("Patients added...");
-		
 		patientList.print();
+		System.out.println("");
+
+		patientList.deletePatient("Luke");
+		patientList.deletePatient("Ruth");
+
+		patientList.print();
+		System.out.println("");
+		
+		patientList.addPatient(jo);
+
+		patientList.deletePatient("Annie");
+
+		patientList.print();
+
+
 
 
 	}
