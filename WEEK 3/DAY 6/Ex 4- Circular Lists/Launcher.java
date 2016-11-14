@@ -16,6 +16,8 @@ public class Launcher {
 		Patient emily = new Patient("Emily", 5, "Chicken Pox");
 		Patient jo = new Patient("Jo", 28, "Acne");
 
+		System.out.println("Patients created...");
+
 		patientList.addPatient(matthew);
 		patientList.addPatient(mark);
 		patientList.addPatient(luke);
@@ -26,6 +28,10 @@ public class Launcher {
 		patientList.addPatient(barbara);
 		patientList.addPatient(jeremy);
 		patientList.addPatient(emily);
+
+		System.out.println("Patients added...");
+		
+		patientList.print();
 
 
 	}
