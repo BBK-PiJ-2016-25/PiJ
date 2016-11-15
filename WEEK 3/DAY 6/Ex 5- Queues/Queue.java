@@ -1,7 +1,6 @@
 public class Queue {
 	
 	private int[] queueSpace;
-	private int head;
 	private int size;
 	
 	public Queue() {
@@ -28,16 +27,7 @@ public class Queue {
 
 		} else {
 
-			if (size == 0) {
-
-				queueSpace[0] = element;
-				head = 0;
-
-			} else {
-
 				queueSpace[size] = element;
-
-			}
 
 				size++;
 		}
