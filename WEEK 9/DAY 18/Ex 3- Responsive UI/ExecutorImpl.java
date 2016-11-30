@@ -13,6 +13,7 @@ public class ExecutorImpl implements Executor {
 		while (queue.size() > 0) {
 			try {
 				Thread t = new Thread(queue.take());
+				t.start();
 			} catch (InterruptedException ex) {
 				ex.printStackTrace();
 			}
