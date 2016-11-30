@@ -7,9 +7,7 @@ public class ExecutorImpl implements Executor {
 
 	
 	public void execute(Runnable command) {
-		
 		queue.add(command);
-
 		while (queue.size() > 0) {
 			try {
 				Thread t = new Thread(queue.take());
@@ -18,6 +16,10 @@ public class ExecutorImpl implements Executor {
 				ex.printStackTrace();
 			}
 		}
+	}
+
+	public int getMaxPendingTime() {
+		return queue.size() * 1000;
 	}
 
 }
